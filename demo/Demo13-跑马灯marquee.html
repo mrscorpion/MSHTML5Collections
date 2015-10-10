@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑马灯-marquee标签</title>
+    <style>
+        marquee {
+            width:200px;
+            height:200px;
+            background-color: skyblue;
+        }
+    </style>
+    <style type="text/css">
+        .one {
+            font-weight: bold;
+        }
+        .two {
+            text-decoration: underline;
+        }
+        .three {
+            font-style: italic;
+        }
+        .four {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.什么是marquee标签?
+作用: 跑马灯
+
+格式:
+<marquee>内容</marquee>
+
+属性:
+direction: 设置滚动方向 left/right/up/down
+scrollamount: 设置滚动速度, 值越大就越快
+loop: 设置滚动次数, 默认是-1, 也就是无限滚动
+behavior: 设置滚动类型 slide滚动到边界就停止, alternate滚动到边界就弹回
+
+注意点:
+marquee标签不是W3C推荐的标签, 在W3C官方文档中也无法查询这个标签, 但是各大浏览器对这个标签的支持非常好
+-->
+<!--滚动方向-->
+<marquee>随便写点内容</marquee>
+<marquee direction="right">随便写点内容</marquee>
+<marquee direction="up">随便写点内容</marquee>
+<marquee direction="down">随便写点内容</marquee>
+<hr>
+<!--设置滚动速度-->
+<marquee scrollamount="1">随便写点内容</marquee>
+<marquee scrollamount="100">随便写点内容</marquee>
+<hr>
+<!--设置滚动次数-->
+<marquee loop="1">随便写点内容</marquee>
+<hr>
+<!--设置滚动类型-->
+<marquee behavior="slide">随便写点内容</marquee>
+<marquee behavior="alternate">随便写点内容</marquee>
+
+<marquee>
+    <img src="ImagesTest/down.jpg" width="50px">
+</marquee>
+
+<hr>
+<!--02 字符实体-->
+<!--
+1.在HTML中对空格/回车/tab不敏感, 会把多个空格/回车/tab当做一个空格来处理
+
+2.什么是字符实体?
+在HTML中有的字符是被HTML保留的, 有的HTML字符在HTML中是有特殊含义的, 是不能在浏览器中直接显示出来的, 那么这些东西要想显示出来就必须通过字符实体
+
+&nbsp; 空格, 一个&nbsp;就是一个空格, 有多少个&nbsp;就有多少个空格
+&lt; 小于符号 <    (less than)
+&gt; 大于符号 >    (greater than)
+&copy; 版权符号
+-->
+<p>字符实体</p>
+<p>我&nbsp;&nbsp;&nbsp;爱你</p>
+<p>到此为止我们的HTML的基础标签就学习完毕了, 例如我们学习了&lt;h1&gt;标签, &lt;table&gt;标签, &lt;img&gt;标签....</p>
+&copy;
+
+<hr>
+<!--03 HTML中被废弃的标签-->
+<p>HTML中被废弃的标签</p>
+<!--
+1.为什么HTML中有一部分标签会被废弃?
+因为当前的HTML中的标签只有一个作用, 就是用来添加语义
+而早期的HTML标签中有一部分标签是没有语义的,
+有一部分标签是用来修改样式的
+所以这部分标签就被淘汰了
+
+<br> <hr> <font>
+<b> <u> <i> <s>以上标签都是没有语义的,都是用来修改样式的
+b(bold) 加粗文本, 没有任何语义的
+u(underline) 给文本天津下划线, 没有任何语义的
+i(italic) 将文本倾斜, 没有任何语义的
+s(strikethourgh) 给文本添加删除线, 没有任何语义的
+
+注意点:
+以后在企业开发中, 不到万不得已一定不要使用这些被废弃掉的标签
+如果一定要使用, 一般情况下都是用来作为CSS的钩子来使用
+
+strong == b
+ins == u
+em == i
+del == s
+
+strong语义: 定义重要性强调的文字
+ins语义(inseted): 定义插入的文字
+em语义(emphasized): 定义强调的文字
+del语义(deleted): 定义被删除的文字
+-->
+
+<b>我是文字</b>
+<u>我是文字</u>
+<i>我是文字</i>
+<s>我是文字</s>
+<hr>
+<strong>我是文字</strong>
+<ins>我是文字</ins>
+<em>我是文字</em>
+<del>我是文字</del>
+<hr>
+<p class="one">我是文字</p>
+<p class="two">我是文字</p>
+<p class="three">我是文字</p>
+<p class="four">我是文字</p>
+</body>
+</html>

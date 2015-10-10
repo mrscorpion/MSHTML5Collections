@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML阶段测试</title>
+</head>
+<body>
+<!--
+    一:选择题
+    1.HTML 指的是？
+    A.超文本标记语言（Hyper Text Markup Language）
+    B.家庭工具标记语言（Home Tool Markup Language）
+    C.超链接和文本标记语言（Hyperlinks and Text Markup Language）
+
+    2.Web 标准的制定者是？
+    A.微软（Microsoft）
+    B.万维网联盟（W3C）
+    C.苹果公司（Apple）
+    C.谷歌公司（Google）
+
+    3.在下列的 HTML 中，哪个是最大的标题？
+    A.<h6>
+    B.<head>
+    C.<heading>
+    D.<h1>
+
+    4 .在下列的 HTML 中，哪个可以插入折行？
+    A.<br>
+    B.<lb>
+    C.<break>
+
+    5.在下列的 HTML 中，哪个可以添加背景颜色？
+    A.<body color="yellow">
+B.<background>yellow</background>
+C.<body bgcolor="yellow">
+
+6.请选择产生粗体字的 HTML 标签：
+A.<bold>
+    B.<bb>
+    C.<b>
+    D.<bld>
+
+    7.请选择产生斜体字的 HTML 标签：
+    A.<i>
+    B.<italics>
+    C.<ii>
+
+    8.在下列的 HTML 中，哪个可以产生超链接？
+    A.<a url="http://www.w3school.com.cn">W3School.com.cn</a>
+    B.<a href="http://www.w3school.com.cn">W3School</a>
+    C.<a>http://www.w3school.com.cn</a>
+    D.<a name="http://www.w3school.com.cn">W3School.com.cn</a>
+
+    9.如何在新窗口打开链接？
+    A.<a href="url" new>
+    B.<a href="url" target="_blank">
+    C.<a href="url" target="new">
+
+    10.以下选项中，哪个全部都是表格标签？
+    A.<table><head><tfoot>
+B.<table><tr><td>
+    C.<table><tr><tt>
+    D.<thead><body><tr>
+
+    11. 请选择可以使单元格中的内容进行左对齐的正确 HTML 标签：
+    A.<td align="left">
+    B.<td valign="left">
+    C.<td leftalign>
+    D.<tdleft>
+
+    12.如何产生带有数字列表符号的列表？
+    A.<ul>
+    B.<dl>
+    C.<ol>
+    D.<list>
+
+    13.如何产生带有圆点列表符号的列表？
+    A.<dl>
+    B.<list>
+    C.<ol>
+    D.<ul>
+
+    14.在下列的 HTML 中，哪个可以产生复选框？
+    A.<input type="check">
+    B.<checkbox>
+    C.<input type="checkbox">
+    D.<check>
+
+    15.在下列的 HTML 中，哪个可以产生文本框？
+    A.<input type="textfield">
+    B.<textinput type="text">
+    C.<input type="text">
+    D.<textfield>
+
+    16.在下列的 HTML 中，哪个可以产生下拉列表？
+    A.<list>
+    B.<input type="list">
+    C.<input type="dropdown">
+    D.<select>
+
+    17.在下列的 HTML 中，哪个可以产生文本区（textarea）？
+    A.<textarea></textarea>
+    B.<input type="textarea">
+    C.<input type="textbox">
+
+    18.在下列的 HTML 中，哪个可以插入图像？
+    A.<img href="image.gif">
+    B.<image src="image.gif">
+    C.<img src="image.gif">
+    D.<img>image.gif</img>
+
+    19.在HTML页面中,使用哪个标签可以实现文字和图片的滚动效果?
+    A.<hr>
+    B.<br>
+    C.<marquee>
+    D.<scroll>
+
+    20.以下标记符中，用于设置页面标题的是?
+    A.<title>
+    B.<caption>
+    C.<head>
+    D.<html>
+
+21.以下标记符中，没有对应的结束标记的是
+A.<body>
+B.<br>
+C.<html>
+D.<title>
+
+    22.默认情况下，使用P标记会形成什么效果？
+    A.在文字P所在位置中加入8个空格
+    B.P后面的文字会变成粗体
+    C.开始新的一行
+    D.P后面的文字会变成斜体
+
+    23.我们在HTML页面中制作了一个图像，想要在鼠标指向这个图像时浮出一条提示信息，应该使用哪个参数做到？
+    A.pop
+    B.src
+    C.alt
+    D.msg
+
+    24.哪一个标记用于使HTML文档中表格里的单元格在同行进行合并？
+    A.cellspacing
+    B.cellpadding
+    C.rowspan
+    D.colspan
+
+    25.哪一个标记用于使HTML文档中表格里的单元格在不同行进行合并？
+    A.cellspacing
+    B.cellpadding
+    C.rowspan
+    D.colspan
+
+    26.在页面中看不见的表单元素是那种？
+    A.<input type="password"></input>
+    B.<input type="radio"></input>
+    C.<input type="hidden"></input>
+    D.<input type="reset"></input>
+
+    27.哪条命令用于使一行文本折行，而不是插入一个新的段落？
+    A.<td>
+    B.<br>
+    C.<p>
+    D.<h1>
+
+    28.需要创建一个多选框，且和文本关联起来（单击文本就像单击核选框一样）。下列 HTML 代码中，正确的是?
+    A.<input type="checkbox" /><label>记住我
+</label>
+    B.<input type="checkbox" /><label for="checkbox">记住我
+</label>
+    C.<input type="checkbox" id="c1" /><label>记住我
+</label>
+    D.<input type="checkbox" id="c1" /><label for="c1">记住我</label>
+
+    29.下列属性中，不能用于 <td> 元素的是?
+    A.cellpadding
+    B.colspan
+    C.rowSpan
+    D.valign
+
+    30.在网页中显示特殊字符，如果要输入“<”，应使用
+    A．lt;
+    B．&Lt;
+    C．&lt
+    D．&lt;
+
+    31.以下有关表单的说明中，错误的是
+    A.表单通常用于搜集用户信息。
+    B.在 FORM 标记符中使用 action 属性指定表单处理程序的位置。
+    C.表单中只能包含表单控件，而不能包含其他诸如图片之类的内容。
+    D．在 FORM 标记符中使用 method 属性指定提交表单数据的方法。
+
+    32.在指定单选框时，只有将以下属性的值指定为相同，才能使它们成为一组
+    A．type
+    B．name
+    C．value
+    D．checked
+
+    33.以下有关按钮的说法中，错误的是
+    A．可以用图像作为提交按钮。
+    B．可以用图像作为重置按钮。
+    C．可以控制提交按钮上的显示文字。
+    D．可以控制重置按钮上的显示文字。
+
+    34.HTML中注释的写法正确的是
+    A.<!-- 注释内容 --!>
+B.<!-- 注释内容 --%>
+C.<%-- 注释内容 --%>
+D.<!-- 注释内容 -->
+
+    35.在一组单选框中, 下列哪个属性可以用来设置默认选中
+    A.checked
+    B.noresize
+    C.slected
+    D.multiple
+
+    36.在下拉列表中(select), 下列哪个属性可以用来设置默认选中
+    A.checked
+    B.noresize
+    C.slected
+    D.multiple
+
+    二.简答题
+    1.HTML5 之前的HTML版本是什么？
+    2.HTML5 的正确doctype是？
+    3.用于播放 HTML5 视频文件的正确HTML5标签是?
+    4.用于播放 HTML5 音频文件的正确HTML5标签是?
+    5.如何解决HTML5中音频/视频播放格式兼容问题?
+    6.H系列标签的作用是什么?
+    7.简述HTML文件中Doctype的作用？
+    8.如何防止网页中的中文出现乱码?
+    9.试说明img的alt和title是干什么的?
+    10.如何保证img标签中的图片不会变形?
+
+    答案:
+    ABDAC
+    CABBB
+    ACDCC
+    DACCA
+    BCCDC
+    CBDAD
+    CBBDAC
+
+    1.HTML 4.01
+    2.<!DOCTYPE html>
+    3.<video>
+        4.<audio>
+        5.通过scouce标签设置多个不同格式, 以便于浏览器查找自身支持的格式
+        6.用于给文本添加标题语义
+        7.<!DOCTYPE> 声明位于文档中的最前面的位置，处于 <html> 标签之前。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范
+    8.通过meta标签指定字符集, 保证文件保存的字符集和浏览器解析网页时的字符集为同一字符集
+    9.title: 用于告诉浏览器, 当鼠标悬停在图片上时, 需要弹出的描述框中显示什么内容
+    alt其实是英文alternate的缩写, 它的作用就是用于告诉浏览器, 当需要显示的图片找不到时显示什么内容
+    10.不设置img标签的宽度和高度属性, 使用默认的宽高. 或者只设置img标签的宽度或者高度
+-->
+</body>
+</html>

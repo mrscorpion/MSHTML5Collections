@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签基本使用</title>
+</head>
+<body>
+<!--
+一个稍微复杂的知识点
+-->
+
+<!--
+其实在过去表格标签用的非常非常的多, 绝大多数的网站都是使用表格标签来制作的, 也就是说表格标签是一个时代的代表
+
+1.什么是表格标签?
+表格标签作用: 用来给一堆数据添加表格语义
+其实表格是一种数据的展现形式, 当数据量非常大的时候, 表格这种展现形式被认为是最为清晰的一种展现形式
+
+2.表格标签格式:
+<table>
+    <tr>
+        <td>需要显示的内容</td>
+    </tr>
+</table>
+其实表格标签中的table代表整个表格, 也就是一堆table标签就是一个表格
+其实表格标签中的tr标签代表整个表格中的一行数据, 也就是说一对tr标签就是表格中的一行
+其实表格标签中的td标签代表表格中一行中的一个单元格, 也就是说一对td标签就是一行中的一个单元格
+
+3.注意点
+3.1表格标签有一个边框属性, 这个属性决定了边框的宽度. 默认情况下这个属性的值是0, 所以看不到边框
+3.2表格标签和列表标签一样, 它是一个组合标签, 所以table/tr/td要么一起出现, 要么一起不出现, 不会单个出现
+-->
+
+<!--要求写一个表格, 这个表格中有2行3列-->
+<table border="1">
+    <tr>
+        <td>1.1</td>
+        <td>1.2</td>
+        <td>1.3</td>
+    </tr>
+    <tr>
+        <td>2.1</td>
+        <td>2.2</td>
+        <td>2.3</td>
+    </tr>
+</table>
+
+<hr />
+<table border="0">
+    <tr>
+        <td>1.1</td>
+        <td>1.2</td>
+        <td>1.3</td>
+    </tr>
+    <tr>
+        <td>2.1</td>
+        <td>2.2</td>
+        <td>2.3</td>
+    </tr>
+</table>
+
+<!--02 表格标签的属性-->
+<!--
+1.宽度和高度的属性
+可以给table标签和td标签使用
+1.1表格的宽度和高度默认是按照内容的尺寸来调整的, 也可以通过给table标签设置width/height属性的方式来手动指定表格的宽度和高度
+1.2如果给td标签设置widht/height属性, 会修改当前单元格的宽度和高度, 不会影响整个表格的宽度和高度
+
+2.水平对齐和垂直对齐的属性
+其中水平对齐可以给table标签和tr标签和td标签使用
+垂直对齐只能给tr标签和td标签使用
+2.1给table标签设置align属性, 可以控制表格在水平方向的对齐方式
+2.2给tr标签设置align属性, 可以控制当前行中所有单元格内容的水平方向的对齐方式
+2.3给td标签设置align属性, 可以控制当前单元格中内容在说方向的对齐方式
+注意点: 如果td中设置了align属性, tr中也设置了align属性, 那么单元格中的内容会按照td中设置的来对齐
+
+2.4给tr标签设置valign属性, 可以控制当前行中所有单元格中的内容, 在垂直方向的对齐方式
+2.5给td标签设置valign属性, 可以控制当前单元格中的内容在垂直方向的对齐方式
+注意点:  如果td中设置了valign属性, tr中也设置了valign属性, 那么单元格中的内容会按照td中设置的来对齐
+
+3.外边距和内边距的属性
+只能给table标签使用
+3.1.外边距就是单元格和单元格之间的距离, 我们称之为外边距
+默认情况下单元格和单元格之间的外边距的距离是2px
+
+3.2 内边距就是单元格的边框和文字之间的间隙, 我们称之为内边距
+默认情况下内边距是1
+
+
+注意: 以上讲解的内容仅仅作为了解, 以后在企业开发中所有控制样式的都是通过CSS
+-->
+
+<!--编写一个2行2列的表格-->
+<table border="1" width="500px" height="300px" align="right" cellspacing="12px" cellpadding="1">
+    <tr valign="bottom">
+        <td width="150px" height="50px">1.1</td>
+        <td valign="top">1.2</td>
+    </tr>
+    <tr align="center">
+        <td align="right">2.1</td>
+        <td>2.2</td>
+    </tr>
+</table>
+
+<hr />
+<!--03 细线表格-->
+<!--
+在表格标签中想通过指定外边距为0来实现细线表格是不靠谱的, 其实它是将2条线合并为了一条线, 所以看上去很不舒服
+
+细线表格的制作方式:
+1.给table标签设置bgcolor
+2.给tr标签设置bgcolor
+3.给table标签设置cellspacing = "1px"
+
+注意点:
+table标签和tr标签以及td标签都支持bgcolor属性
+但是以上内容仅仅作为了解, 因为样式以后都是通过css来控制
+-->
+<table bgcolor="black" cellspacing="1px">
+    <tr bgcolor="white">
+        <td bgcolor="red">1.1</td>
+        <td>1.2</td>
+    </tr>
+    <tr bgcolor="white">
+        <td>2.1</td>
+        <td>2.2</td>
+    </tr>
+</table>
+
+<hr />
+<!--04 表格标签的其它标签-->
+<!--
+1.表格标题
+在表格标签中提供了一个标签专门用来设置表格的标题, 这个标签叫做caption(标题). 只要将标题写在caption标签中, 那么标题就会自动相对于表格的宽度居中
+
+2.caption标签的注意点:
+2.1caption一定要写在table标签中, 否则无效
+2.2caption一定要紧跟在table标签后面
+
+3.标题单元格标签
+3.1.在表格标签中提供了一个标签专门用来存储每一列的标题, 这个标签叫做th标签, 只要将当前列的标题存储在这个标签中就会自动居中+加粗文字
+
+3.2.到此为止我们就发现, 其实表格中有两种单元格, 一种是td, 一种是th. td是专门用来存储数据的, th是专门用来存储当前列的标题的
+-->
+
+<table bgcolor="black" cellspacing="1px" width="800px" align="center">
+    <caption>
+        <h2>今日小说排行榜</h2>
+    </caption>
+    <tr bgcolor="#a9a9a9">
+        <th>排名</th>
+        <th>关键词</th>
+        <th>趋势</th>
+        <th>今日搜索</th>
+        <th>最近七日</th>
+        <th>相关链接</th>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td>
+            <img src="ImagesTest/up.jpg">
+        </td>
+        <td>623557</td>
+        <td>4088311<img src="ImagesTest/down.jpg"/></td>
+        <td>
+            <a href="#">贴吧</a>
+            <a href="">图片</a>
+            <a href="">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td>
+            <img src="ImagesTest/up.jpg">
+        </td>
+        <td>623557</td>
+        <td>4088311</td>
+        <td>
+            <a href="#">贴吧</a>
+            <a href="">图片</a>
+            <a href="">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td>
+            <img src="ImagesTest/down.jpg">
+        </td>
+        <td>623557</td>
+        <td>4088311</td>
+        <td>
+            <a href="#">贴吧</a>
+            <a href="#">图片</a>
+            <a href="#">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td>
+            <img src="ImagesTest/down.jpg">
+        </td>
+        <td>623557</td>
+        <td>4088311</td>
+        <td>
+            <a href="#">贴吧</a>
+            <a href="#">图片</a>
+            <a href="#">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td>
+            <img src="ImagesTest/up.jpg">
+        </td>
+        <td>623557</td>
+        <td>4088311</td>
+        <td>
+            <a href="#">贴吧</a>
+            <a href="#">图片</a>
+            <a href="#">百科</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

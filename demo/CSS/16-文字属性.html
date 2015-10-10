@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字属性</title>
+    <style>
+        p{
+            /*font-style: italic;*/
+            /*font-weight: bold;*/
+            /*font-size: 10px;*/
+            /*font-family:"Microsoft YaHei", "楷体";*/
+            /*
+            被注释掉的内容
+            */
+            /*font-family: Arial, "微软雅黑";*/
+            /*font-family:"Microsoft YaHei";*/
+
+            /*文字属性的缩写*/
+            font:bold italic 10px "楷体";
+        }
+    </style>
+</head>
+<body>
+<!--
+1.规定文字样式的属性
+格式：font-style: italic;
+取值：
+normal ： 正常的， 默认就是正常的
+italic :  倾斜的
+快捷键：
+fs font-style: italic;
+fsn font-style: normal;
+
+2.规定文字粗细的属性
+格式： font-weight: bold;
+单词取值:
+bold 加粗
+bolder  比加粗还要粗
+lighter 细线， 默认就是细线
+数字取值：
+100-900之间整百的数字
+
+快捷键
+fw font-weight:;
+fwb font-weight: bold;
+fwbr  font-weight: bolder;
+
+3.规定文字大小的属性
+格式：font-size: 30px;
+单位：px（像素 pixel）
+注意点： 通过font-size设置大小一定要带单位， 也就是一定要写px
+快捷键
+fz font-size:;
+fz30 font-size: 30px;
+
+4.规定文字字体的属性
+格式：font-family:"楷体";
+注意点：
+1.如果取值是中文， 需要用双引号或者单引号括起来
+2.设置的字体必须是用户电脑里面已经安装的字体
+快捷键
+ff font-family:;
+-->
+<!-- 【默认字体】
+1.如果设置的字体不存在, 那么系统会使用默认的字体来显示
+默认使用宋体
+
+2.如果设置的字体不存在, 而我们又不想用默认的字体来显示怎么办?
+可以给字体设置备选方案
+格式:font-family:"字体1", "备选方案1", ...;
+
+3.如果想给中文和英文分别单独设置字体, 怎么办?
+但凡是中文字体, 里面都包含了英文
+但凡是英文字体, 里面都没有包含中文
+也就是说中文字体可以处理英文, 而英文字体不能处理中文
+**注意点: 如果想给界面中的英文单独设置字体, 那么英文的字体必须写在中文的前面
+
+4.补充在企业开发中最常见的字体有以下几个
+中文: 宋体/黑体/微软雅黑
+英文: "Times New Roman"/Arial
+
+还需要知道一点, 就是并不是名称是英文就一定是英文字体
+因为中文字体其实都有自己的英文名称, 所以是不是中文字体主要看能不能处理中文
+宋体 SimSun
+黑体 SimHei
+微软雅黑 Microsoft YaHei
+-->
+<!-- 【文字缩写】
+缩写格式:
+font: style weight size family;
+例如:
+font:italic bold 10px "楷体";
+
+注意点:
+1.在这种缩写格式中有的属性值可以省略
+sytle可以省略
+weight可以省略
+2.在这种缩写格式中style和weight的位置可以交换
+3.在这种缩写格式中有的属性值是不可以省略的
+size不能省略
+family不能省略
+4.size和family的位置是不能顺便乱放的
+size一定要写在family的前面, 而且size和family必须写在所有属性的最后
+-->
+
+<i>我是文字</i>
+<b>我是文字</b>
+<p>abc我是段落</p>
+</body>
+</html>
