@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Swift  在线编辑器 | 菜鸟教程</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://static.runoob.com/assets/CodeMirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="http://static.runoob.com/assets/CodeMirror/lib/codemirror.min.css">
+    </script><script src="/static/codemirror5.0/mode/swift/swift.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <style>
+
+        .CodeMirror {
+            font-size:12px;
+            height:450px;
+        }
+        #textareaCode {
+            height: 450px;
+        }
+        #iframeResult {
+            border: 0!important;
+            min-width: 100px;
+            width: 100%;
+            height: 450px;
+            background-color: #fff;
+        }
+        @media screen and (max-width: 768px) {
+            #textareaCode {
+                height: 300px;
+            }
+            .CodeMirror {
+                font-size:12px;
+                height:300px;
+            }
+            #iframeResult {
+                height: 300px;
+            }
+            .form-inline {
+                padding: 6px 0 2px 0;
+            }
+        }
+        .ad {
+            text-align: center;
+        }
+    </style>
+
+<body>
+<div class="container" style="width:100%;height:100%; font-size:12px;">
+    <!-- 广告位 -->
+    <div class="row" style="min-height:90px" >
+        <div class="ad">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- demo测试页广告 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;min-width:300px;max-width:970px;width:100%;height:90px"
+                 data-ad-client="ca-pub-5751451760833794"
+                 data-ad-slot="6979016065"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>   	</div>
+    </div>
+    <div class="row" style="background-color: #e5eecc;">
+        <div class="panel panel-default" style="margin-bottom:0;">
+
+
+            <div class="panel-body" style="background-color: #e5eecc;border-color: #e5eecc;">
+                <form autocomplete="off" role="form">
+
+                    <div class="row" >
+                        <div class="col-sm-6">
+
+                            <div class="row-fluid">
+                                <label class="inline" ><strong style="font-size: 16px;color:#617f10;">Swift 源代码:</strong></label>
+                                <input id="submitBTN" type="button" class="pull-right inline" value="提交运行 &#187;" >
+                                <input type="hidden" id="bt" name="bt">
+                                <input type="hidden" name="code" id="code" />
+                            </div>
+                            <textarea class="form-control"  id="textareaCode" name="textareaCode" >/* 我的第一个 Swift 程序 */
+var myString = &quot;Hello, World!&quot;
+
+print(myString)</textarea>
+
+
+                        </div>
+                        <div class="col-sm-6">
+
+                            <label><strong style="font-size: 16px;color:#617f10;"> 运行结果：</strong></label>
+                            <label class="pull-right"><a href="http://c.runoob.com" target="_blank"  style="font-size: 16px;color:#617f10;text-decoration: underline;"> 菜鸟工具</a></label>
+
+
+                            <div id="iframewrapper">
+
+                                <iframe id="iframeResult" class="result_output"  frameborder="0" name="view" src="http://static.runoob.com/code/swift/HelloWorld.swift.htm" width="400"></iframe>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</div>
+<script type="text/javascript" src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+<div style="display:none;">
+    <script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8e2a116daf0104a78d601f40a45c75b4";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</div><script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+        lineNumbers: false,
+        matchBrackets: true,
+        mode: "text/x-swift",
+        indentUnit: 4,
+        indentWithTabs: true
+    });
+    var ifr = document.createElement("iframe");
+    ifr.setAttribute("frameborder", "0");
+    ifr.setAttribute("id", "iframeResult");
+    document.getElementById("iframewrapper").innerHTML = "";
+    document.getElementById("iframewrapper").appendChild(ifr);
+    var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+    ifrw.document.open();
+    ifrw.document.write("<html><head><\/head><body>Hello, World!<br><\/body><\/html>");
+    ifrw.document.close();
+    $("#submitBTN").click(function() {
+        code = editor.getValue();
+        runcode = 16;
+        loadingdata = '<img src="/static/img/loading.gif">';
+        ifrw.document.open();
+        ifrw.document.write(loadingdata);
+        ifrw.document.close();
+        $.post("http://tool.runoob.com/compile.php",{code:code,language:runcode},function(data){
+            text = data.output.replace(/\r\n|\r|\n/g,"<br />")  + data.errors;
+            ifrw.document.open();
+            ifrw.document.write('<pre>' + text + '</pre>');
+            ifrw.document.close();
+        });
+    })
+</script>
+</body>
+</html>
+

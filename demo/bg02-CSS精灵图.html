@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS精灵图</title>
+    <style>
+        .box{
+            width: 86px;
+            height: 28px;
+            background-image: url(../src/img/weibo.png);
+            background-position: -425px -200px;
+        }
+        div{
+            background-image: url(../src/img/a-z.jpg);
+            display: inline-block;
+        }
+        .box1{
+            width: 110px;
+            height: 143px;
+            background-position: -560px -216px;
+        }
+        .box2{
+            width: 127px;
+            height: 140px;
+            background-position: -834px -217px;
+        }
+        .box3{
+            width: 124px;
+            height: 144px;
+            background-position: -264px -215px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.什么是CSS精灵图
+CSS精灵图是一种图像合成技术
+
+2.CSS精灵图作用
+可以减少请求的次数, 以及可以降低服务器处理压力
+
+3.如何使用CSS精灵图
+CSS的精灵图需要配合背景图片和背景定位来使用
+-->
+<div class="box"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优先级之权重问题</title>
+    <style>
+        /*优先级之权重问题*/
+        /*
+        #identity1 .box2{
+            color: red;
+        }
+        .box1 .box2{
+            color: green;
+        }
+        div ul li p{
+            color: blue;
+        }
+        */
+        /*
+        .box1 .box2{
+            color: blue;
+        }
+        div .box2{
+            color: green;
+        }
+        */
+
+        #identity1 ul li p{
+            color: orange;
+        }
+        #identity1 ul p{
+            color: green;
+        }
+
+        /*
+        .box1 li #identity2{
+            color: blue;
+        }
+
+        #identity1 ul .box2{
+            color: red;
+        }*/
+
+        /*
+        .box2{
+            color: red;
+        }
+        li{
+            color: blue;
+        }*/
+
+        /*练习01*/
+        #father{
+            color:red;
+        }
+        p{
+            color:blue;
+        }
+        p.box2{
+            color:greenyellow;
+        }
+        div div{
+            color:yellow;
+        }
+        div div div div div div div div div div div div{
+            color:purple;
+        }
+        .para{
+            color:maroon;
+        }
+
+        #father2 #son2{
+            color:blue;
+        }
+        #father p.box2{
+            color:black;
+        }
+        div.box1 p.box2{
+            color:red;
+        }
+        #father2{
+            color:green !important;
+        }
+        div#father2.box1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.什么是优先级的权重?
+作用: 当多个选择器混合在一起使用时, 我们可以通过计算权重来判断谁的优先级最高
+
+2.权重的计算规则
+2.1首先先计算选择器中有多少个id, id多的选择器优先级最高
+2.2如果id的个数一样, 那么再看类名的个数, 类名个数多的优先级最高
+2.3如果类名的个数一样, 那么再看标签名称的个数, 标签名称个数多的优先级最高
+2.4如果id个数一样, 类名个数也一样, 标签名称个数也一样, 那么就不会继续往下计算了, 那么此时谁写在后面听谁的
+也就是说优先级如果一样, 那么谁写在后面听谁的
+
+注意点:
+1.只有选择器是直接选中标签的才需要计算权重, 否则一定会听直接选中的选择器的
+-->
+
+<div id="identity1" class="box1">
+    <ul>
+        <li>
+            <p id="identity2" class="box2">我是段落</p>
+        </li>
+    </ul>
+</div>
+
+<div id="father" class="box1">
+    <p class="box2">
+        1这行文字是什么颜色的？
+    </p>
+    <p>2这行文字是什么颜色的？</p><br>
+    3这行文字是什么颜色的？
+</div>
+
+<div>
+    <div>
+        <div>
+            这行文字是什么颜色的？
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div class="para">这行文字是什么颜色?</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="father2" class="box1">
+    这不是内容吗？
+    <p id="son2" class="box2">
+        这行文字是什么颜色的？
+    </p>
+</div>
+</body>
+</html>

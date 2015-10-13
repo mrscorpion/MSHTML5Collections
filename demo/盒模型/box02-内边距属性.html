@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内边距属性（padding） 和 外边距属性（span）</title>
+    <style>
+        div{
+            width: 98px;
+            height: 90px;
+            border: 1px solid #000;
+            background-color: red;
+        }
+        .box1{
+            padding-top: 20px;
+        }
+        .box2{
+            padding-right:40px;
+        }
+        .box3{
+            padding-bottom:80px;
+        }
+        .box4{
+            padding-left:160px;
+        }
+        .box5{
+            /*padding:20px 40px 80px 160px;*/
+            /*padding:20px 40px 80px;*/
+            /*padding:20px 40px;*/
+            padding:20px;
+        }
+
+        /*外边距属性*/
+        div{
+            height: 100px;
+            border: 1px solid #000;
+        }
+        *{
+            padding:0;
+            margin:0;
+        }
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: red;
+        }
+        .box6{
+            /*
+            margin-top:20px;
+            margin-right:40px;
+            margin-bottom:80px;
+            margin-left:160px;
+            */
+            /*margin:20px 40px 80px 160px;*/
+            /*margin:20px 40px 80px;*/
+            /*margin:20px 40px;*/
+            margin:20px;
+        }
+
+        /*外边距合并现象*/
+        .hezi1{
+            margin-right:50px;
+        }
+        .hezi2{
+            margin-left:100px;
+        }
+        .box10{
+            margin-bottom:50px;
+        }
+        .box20{
+            margin-top:100px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.什么是内边距?
+边框和内容之间的距离就是内边距
+
+2.格式
+2.1非连写
+padding-top: ;
+padding-right: ;
+padding-bottom: ;
+padding-left: ;
+
+2.2连写
+padding: 上 右 下 左;
+
+2.这三个属性的取值省略时的规律
+2.1上 右 下 左 > 上 右 下 > 左边的取值和右边的一样
+2.2上 右 下 左 > 上 右 > 左边的取值和右边的一样 下边的取值和上边一样
+2.3上 右 下 左 > 上 > 右下左边取值和上边一样
+
+注意点:
+1.给标签设置内边距之后, 标签占有的宽度和高度会发生变化
+2.给标签设置内边距之后, 内边距也会有背景颜色
+-->
+<div class="box1">我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>
+<hr>
+<div class="box2">我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>
+<hr>
+<div class="box3">我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>
+<hr>
+<div class="box4">我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>
+<hr>
+<div class="box5">我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>
+
+<hr>
+<!--
+1.什么是外边距?
+标签和标签之间的距离就是外边距
+
+2.格式
+2.1非连写
+margin-top: ;
+margin-right: ;
+margin-bottom: ;
+margin-left: ;
+
+2.2连写
+margin: 上 右 下 左;
+
+2.这三个属性的取值省略时的规律
+2.1上 右 下 左 > 上 右 下 > 左边的取值和右边的一样
+2.2上 右 下 左 > 上 右 > 左边的取值和右边的一样 下边的取值和上边一样
+2.3上 右 下 左 > 上 > 右下左边取值和上边一样
+
+注意点:
+外边距的那一部分是没有背景颜色的
+-->
+<span class="box6">我是span</span><span class="box7">我是span</span><span class="box8">我是span</span><div class="box9"></div>
+
+<hr>
+<!--外边距合并现象-->
+<!--
+在默认布局的垂直方向上, 默认情况下外边距是不会叠加的, 会出现合并现象, 谁的外边距比较大就听谁的
+-->
+<span class="hezi1">我是span1</span><span class="hezi2">我是span2</span>
+<div class="box10">我是div1</div>
+<div class="box20">我是div2</div>
+</body>
+</html>

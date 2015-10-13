@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框属性</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*border: 5px solid blue;*/
+            /*border: 5px solid;*/
+            /*border: 5px blue;*/
+            /*border: solid blue;*/
+
+            border-top:5px solid blue;
+            border-right:10px dashed green;
+            border-bottom:15px dotted purple;
+            border-left:20px double pink;
+        }
+        .box1{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-width: 5px 10px 15px 20px;
+            border-style: solid dashed dotted double;
+            /*border-color: blue green purple pink;*/
+            /*border-color: blue green purple;*/
+            border-color: blue green;
+            /*border-color: blue;*/
+
+            /*border-top-width: 5px;*/
+            /*border-top-style: solid;*/
+            /*border-top-color: blue;*/
+
+            /*border-right-width: 10px;*/
+            /*border-right-style: dashed;*/
+            /*border-right-color: green;*/
+
+            /*border-bottom-width: 15px;*/
+            /*border-bottom-style: dotted;*/
+            /*border-bottom-color: purple;*/
+
+            /*border-left-width: 20px;*/
+            /*border-left-style: double;*/
+            /*border-left-color: pink;*/
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .box2{
+            border: 5px solid black;
+            /*
+            border-top: 5px solid #000;
+            border-right: 5px solid #000;
+            border-bottom: 5px solid #000;
+            border-left: 5px solid #000;
+            */
+            /*
+            border-width:5px;
+            border-style:solid;
+            border-color: #000;
+            */
+            /*
+            border-top-width: 5px;
+            border-top-style: solid;
+            border-top-color: #000;
+
+            border-right-width: 5px;
+            border-right-style: solid;
+            border-right-color: #000;
+
+            border-bottom-width: 5px;
+            border-bottom-style: solid;
+            border-bottom-color: #000;
+
+            border-left-width: 5px;
+            border-left-style: solid;
+            border-left-color: #000;
+            */
+        }
+        .box3{
+            /*
+            border-top: 5px solid red;
+            border-right: 5px solid green;
+            border-bottom: 5px solid blue;
+            border-left: 5px solid purple;
+            */
+            border-width:5px;
+            border-style:solid;
+            border-color: red green blue purple;
+        }
+
+        .box4{
+            border: 5px solid red;
+            border-right:5px dashed red;
+            /*同一个选择器中后面的边框属性会覆盖前面的边框属性*/
+        }
+        .box5{
+            border: 5px solid red;
+            border-style:solid dashed solid dashed;
+            /*border-right:5px dashed red;*/
+            /*border-left:5px dashed red;*/
+        }
+        .box6{
+            border: 5px solid #000;
+            border-bottom: none;
+            /*none 代表不需要边框*/
+        }
+        .box7{
+            width: 0px;
+            height: 0px;
+            border-width:25px;
+            border-style:solid;
+            border-color: red white blue white;
+            border-bottom:none;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.什么边框?
+边框就是环绕在标签宽度和高度周围的线条
+
+2.边框属性的格式
+2.1连写(同时设置四条边的边框)
+border: 边框的宽度 边框的样式 边框的颜色;
+
+快捷键:
+bd+ border: 1px solid #000;
+
+注意点:
+1.连写格式中颜色属性可以省略, 省略之后默认就是黑色
+2.连写格式中样式不能省略, 省略之后就看不到边框了
+3.连写格式中宽度可以省略, 省略之后还是可以看到边框
+
+2.2连写(分别设置四条边的边框)
+border-top: 边框的宽度 边框的样式 边框的颜色;
+border-right: 边框的宽度 边框的样式 边框的颜色;
+border-bottom: 边框的宽度 边框的样式 边框的颜色;
+border-left: 边框的宽度 边框的样式 边框的颜色;
+
+快捷键:
+bt+ border-top: 1px solid #000;
+br+
+bb+
+bl+
+-->
+<div class="box"></div>
+
+<br>
+<!--
+2.3连写(分别设置四条边的边框)
+border-width: 上 右 下 左;
+border-style: 上 右 下 左;
+border-color: 上 右 下 左;
+
+注意点:
+1.这三个属性的取值是按照顺时针来赋值, 也就是按照上右下左来赋值, 而不是按照日常生活中的上下左右
+2.这三个属性的取值省略时的规律
+2.1上 右 下 左 > 上 右 下 > 左边的取值和右边的一样
+2.2上 右 下 左 > 上 右 > 左边的取值和右边的一样 下边的取值和上边一样
+2.3上 右 下 左 > 上 > 右下左边取值和上边一样
+
+
+3.非连写(方向+要素)
+border-left-width: 20px;
+border-left-style: double;
+border-left-color: pink;
+-->
+<div class="box1"></div>
+
+<hr>
+<div class="box2"></div>
+<hr>
+<div class="box3"></div>
+<hr>
+<div class="box4"></div>
+<hr>
+<div class="box5"></div>
+<hr>
+<div class="box6"></div>
+<hr>
+<div class="box7"></div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div和span标签 和 块级元素和行内元素</title>
+    <style>
+        /*div和span标签*/
+        /*.header{
+            width: 980px;
+            height: 100px;
+            background: red;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        .content{
+            width: 980px;
+            height: 500px;
+            background: green;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        .footer{
+            width: 980px;
+            height: 100px;
+            background: blue;
+            margin: auto;
+        }
+        .logo{
+            width: 200px;
+            height: 50px;
+            background: pink;
+            float: left;
+            margin: 20px;
+        }
+        .nav{
+            width: 600px;
+            height: 50px;
+            background: yellow;
+            float: right;
+            margin: 20px;
+        }
+        .aside{
+            width: 250px;
+            height: 460px;
+            background: purple;
+            float: left;
+            margin: 20px;
+        }
+        .article{
+            width: 650px;
+            height: 460px;
+            background: deepskyblue;
+            float: right;
+            margin: 20px;
+        }
+        span{
+            color: red;
+        }*/
+
+        /*div和span标签*/
+        /*div{
+            background: red;
+            width: 200px;
+            height: 200px;
+        }
+        span{
+            background: blue;
+            width: 200px;
+            height: 200px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }*/
+
+        /*CSS元素显示模式转换（display属性）*/
+        div{
+            display: inline;
+            background: red;
+            width: 200px;
+            height: 200px;
+        }
+        span{
+            display: block;
+            background: green;
+            width: 200px;
+            height: 200px;
+        }
+        .cc{
+            display: inline-block;
+            background: blue;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.什么是div?
+作用: 一般用于配合css完成网页的基本布局
+
+2.什么是span?
+作用: 一般用于配合css修改网页中的一些局部信息
+
+3.div和span有什么区别?
+1.div会单独的占领一行,而span不会单独占领一行
+2.div是一个容器级的标签, 而span是一个文本级的标签
+
+4.容器级的标签和文本级的标签的区别?
+容器级的标签中可以嵌套其它所有的标签
+文本级的标签中只能嵌套文字/图片/超链接
+
+容器级的标签
+div h ul ol dl li dt dd ...
+
+文本级的标签
+span p buis strong em ins del ...
+
+注意点:
+哪些标签是文本级的哪些标签是容器级的, 我们不用刻意去记忆, 在企业开发中一般情况下要嵌套都是嵌套在div中, 或者按照组标签来嵌套
+-->
+<!--01 div标签和span标签-->
+<!--<div class="header">-->
+    <!--<div class="logo"></div>-->
+    <!--<div class="nav"></div>-->
+<!--</div>-->
+<!--<div class="content">-->
+    <!--<div class="aside"></div>-->
+    <!--<div class="article"></div>-->
+<!--</div>-->
+<!--<div class="footer"></div>-->
+
+
+<!--<p>努力到<span>无能为力</span>, 拼搏到<span>感动自己</span></p>-->
+
+<!--<div>我是div</div>-->
+<!--<div>我是div</div>-->
+<!--<span>我是span</span>-->
+<!--<span>我是span</span>-->
+
+<!--<div>-->
+    <!--<div>-->
+        <!--<ul>-->
+            <!--<li>-->
+                <!--<img src="picture.jpg" alt="">-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!--<hr />-->
+<!--<p>我是段落-->
+    <!--<h1>我是标题</h1>-->
+<!--</p>-->
+
+
+<!--<h1>我是标题-->
+    <!--<p>我是段落</p>-->
+<!--</h1>-->
+
+
+<!--02 块级元素和行内元素-->
+<!--
+在HTML中HTML将所有的标签分为两类, 分别是容器级和文本级
+在CSS中CSS也将所有的标签分为两类, 分别是块级元素和行内元素
+
+1.什么是块级元素, 什么是行内元素?
+块级元素会独占一行
+行内元素不会独占一行
+
+容器级的标签
+div h ul ol dl li dt dd ...
+文本级的标签
+span p buis stong em ins del ...
+
+块级元素
+p div h ul ol dl li dt dd
+行内元素
+span buis strong em ins del
+
+2.块级元素和行内元素的区别?
+2.1块级元素
+独占一行
+如果没有设置宽度, 那么默认和父元素一样宽
+如果设置了宽高, 那么就按照设置的来显示
+
+2.2行内元素
+不会独占一行
+如果没有设置宽度, 那么默认和内容一样宽
+行内元素是不可以设置宽度和高度的
+
+2.3行内块级元素
+为了能够让元素既能够不独占一行, 又可以设置宽度和高度, 那么就出现了行内块级元素
+-->
+<!--<div>我是div</div>-->
+<!--<p>我是段落</p>-->
+<!--<h1>我是标题</h1>-->
+<!--<hr>-->
+<!--<span>我是span</span>-->
+<!--<b>我是加粗</b>-->
+<!--<strong>我是强调</strong>-->
+<!--<hr>-->
+<!--<img src="picture.jpg" alt="">-->
+<!--<img src="picture.jpg" alt="">-->
+
+
+<!--03 CSS元素显示模式转换（设置元素的display属性）-->
+<!--
+1.如何转换CSS元素的显示模式?
+设置元素的display属性
+
+2.display取值
+block 块级
+inline 行内
+inline-block 行内块级
+
+3.快捷键
+di display: inline;
+db display: block;
+dib display: inline-block;
+-->
+
+<div>我是div</div>
+<div>我是div</div>
+
+<span>我是span</span>
+<span>我是span</span>
+
+<p class="cc">我是段落</p>
+<b class="cc">我是加粗</b>
+</body>
+</html>
