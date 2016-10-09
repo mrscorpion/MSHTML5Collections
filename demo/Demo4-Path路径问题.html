@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路径问题</title>
+</head>
+<body>
+<!--
+路径问题
+其实想给src属性赋值有两种方式
+1.通过相对路径赋值(掌握)
+相对路径就是每次都从.html文件所在的文件夹开始查找, 我们称之为相对路径
+
+1.1同级
+同级就是"图片"和".html文件"存储在同一个文件夹中
+格式: src="13.png"
+含义: 在.html文件所在的文件夹中查找名称叫做QRCode.jpg的图片
+
+1.2下级
+下级就是"存储图片的文件夹"和".html文件"在同一个文件夹中
+格式: src="ImagesTest/MRSCORPION.png"
+含义: 在.html文件所在的文件夹中找到名称叫做images的文件夹
+然后再在images文件夹中找到名称叫做QRCode.jpg的图片
+
+1.3上级
+上级就是"存储图片的位置"和"存储代码的文件夹"在同一个文件夹中
+格式: src="../firefly.png"
+含义：在.html文件所在的文件夹中找到这个文件夹的上一级文件夹, 然后再在上一级文件夹中找到名称叫做QRCode.jpg
+其中../代表找到当前文件夹的上一级文件夹
+
+1.4 跨文件夹
+上级就是"存储图片的位置"和"存储代码的文件夹"在同一个文件夹中
+格式: src="../src/img/MyIcon.png"
+含义：在.html文件所在的文件夹不同级文件夹中查找 文件夹src，子集文件夹img中图片 MyIcon.png
+
+
+2.通过绝对路径赋值(了解)
+绝对路径就是每次都从指定的盘符开始查找
+
+格式: src="/Users/mr.scorpion/MSHTML5Collections/src/img/MyIcon.png"
+
+注意:
+1.路径中不要出现中文, 否则可能出现未知问题
+2.如果是通过"相对路径"来指定图片, 不能跨盘符
+2.1例如.html文件在C盘, 那么不能去查找D盘图片
+-->
+<!--同级-->
+<img src="13.png">
+
+<!--下级-->
+<img src="ImagesTest/MRSCORPION.png">
+
+<!--上级 且同级-->
+<img src="../firefly.png">
+
+<!--跨文件夹 且不同级-->
+<img src="../src/img/MyIcon.png">
+
+<!--通过绝对路径赋值（没效果）-->
+<img src="/Users/mr.scorpion/MSHTML5Collections/src/img/MyIcon.png" >
+</body>
+</html>
